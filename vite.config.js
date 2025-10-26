@@ -1,7 +1,12 @@
-import {defineConfig} from "vite";
-import react from "@vitejs/plugin-react";
+/// <reference types="vitest" />
+import {defineConfig} from 'vite'
+import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-    base: "/text2ics/",
     plugins: [react()],
-});
+    base: '/text2ics/',
+    test: {
+        environment: 'node',
+        globals: true,
+    },
+})

@@ -14,14 +14,18 @@ Mittwoch, 5. November, 10-12 Uhr und 14-18 Uhr`)
                     locale and timezone by default.</p>
                 <div className="flex gap-3 mb-4 items-center">
                     <label className="text-sm">Locale:</label>
-                    <select className="border rounded px-2 py-1" value={locale}
-                            onChange={(e) => setLocale(e.target.value)}>
-                        <option value={navigator.language || 'de'}>{navigator.language || 'de'} (browser)</option>
-                        <option value="de">de</option>
-                        <option value="en">en</option>
-                        <option value="fr">fr</option>
-                        <option value="it">it</option>
+                    <select
+                        value={locale}
+                        onChange={e => setLocale(e.target.value)}
+                        className="px-3 py-2 rounded-md border border-teal-300 bg-teal-50 text-gray-800 shadow-sm focus:outline-none focus:ring-2 focus:ring-teal-500 transition-colors"
+                    >
+                        <option value="de-DE">🇩🇪 Deutsch (DE)</option>
+                        <option value="en-US">🇺🇸 English (US)</option>
+                        <option value="fr-FR">🇫🇷 Français (FR)</option>
+                        <option value="it-IT">🇮🇹 Italiano (IT)</option>
+                        <option value="es-ES">🇪🇸 Español (ES)</option>
                     </select>
+
                 </div>
                 <textarea rows={8} className="w-full rounded-md p-3 border mb-4"
                           value={input} onChange={(e) => setInput(e.target.value)}/>
